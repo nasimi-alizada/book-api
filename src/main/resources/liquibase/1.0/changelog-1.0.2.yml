@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create books table
+      author: Nasimi Alizadeh
+      changes:
+        - createTable:
+            tableName: books
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(64)
+                  remarks: name of book
+                  constraints:
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(64)
+                  remarks: author of book
+              - column:
+                  name: genre
+                  type: varchar(16)
+                  remarks: genre of book
+                  constraints:
+                    nullable: false
+              - column:
+                  name: page
+                  type: int
+                  remarks: page of book
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(16)
+                  remarks: status of book
+
