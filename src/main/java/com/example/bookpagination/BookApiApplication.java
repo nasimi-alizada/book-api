@@ -1,4 +1,4 @@
-package com.example.bookapijpa2;
+package com.example.bookpagination;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

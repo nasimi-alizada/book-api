@@ -1,4 +1,4 @@
-package com.example.bookapijpa2.model.request;
+package com.example.bookpagination.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateBookRequest {
+public class BookRequest {
     private String name;
 
     private String author;
@@ -15,4 +15,6 @@ public class UpdateBookRequest {
     private String genre;
 
     private Integer page;
+
+
 }

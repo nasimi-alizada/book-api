@@ -1,15 +1,15 @@
-package com.example.bookapijpa2.controller;
+package com.example.bookpagination.controller;
 
-import com.example.bookapijpa2.model.request.BookRequest;
-import com.example.bookapijpa2.model.request.PatchBookRequest;
-import com.example.bookapijpa2.model.request.UpdateBookRequest;
-import com.example.bookapijpa2.model.response.BookResponse;
-import com.example.bookapijpa2.service.BookService;
+import com.example.bookpagination.model.criteria.BookCriteria;
+import com.example.bookpagination.model.criteria.PageCriteria;
+import com.example.bookpagination.model.request.BookRequest;
+import com.example.bookpagination.model.request.PatchBookRequest;
+import com.example.bookpagination.model.request.UpdateBookRequest;
+import com.example.bookpagination.model.response.BookResponse;
+import com.example.bookpagination.model.response.PageableBookResponse;
+import com.example.bookpagination.service.BookService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus.*;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.NO_CONTENT;
@@ -27,8 +27,9 @@ public class BookController {
     }
 
     @GetMapping
-    public List<BookResponse> getBooks() {
-        return bookService.getBooks();
+    public PageableBookResponse getBooks(PageCriteria pageCriteria, BookCriteria bookCriteria) {
+       return bookService.getAllBook(pageCriteria, bookCriteria);
+
     }
 
     @PostMapping
@@ -56,6 +57,7 @@ public class BookController {
     public void deleteBook(@PathVariable Long id) {
         bookService.deleteBook(id);
     }
+
 
 }
 

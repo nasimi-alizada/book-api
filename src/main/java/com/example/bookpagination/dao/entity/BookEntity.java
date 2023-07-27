@@ -1,6 +1,6 @@
-package com.example.bookapijpa2.dao.entity;
+package com.example.bookpagination.dao.entity;
 
-import com.example.bookapijpa2.model.enums.BookStatus;
+import com.example.bookpagination.model.enums.BookStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;

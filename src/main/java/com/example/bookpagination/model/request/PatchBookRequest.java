@@ -1,6 +1,5 @@
-package com.example.bookapijpa2.model.request;
+package com.example.bookpagination.model.request;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

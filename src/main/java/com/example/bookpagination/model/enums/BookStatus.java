@@ -1,4 +1,4 @@
-package com.example.bookapijpa2.model.enums;
+package com.example.bookpagination.model.enums;
 
 public enum BookStatus {
     AVAILABLE,RESERVED,SOLD_OUT

@@ -1,4 +1,4 @@
-package com.example.bookapijpa2.model.response;
+package com.example.bookpagination.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,5 +19,6 @@ public class BookResponse {
     private String genre;
 
     private Integer page;
+
 
 }

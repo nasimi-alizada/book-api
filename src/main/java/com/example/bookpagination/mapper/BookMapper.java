@@ -1,13 +1,15 @@
-package com.example.bookapijpa2.mapper;
+package com.example.bookpagination.mapper;
 
-import com.example.bookapijpa2.dao.entity.BookEntity;
-import com.example.bookapijpa2.model.enums.BookStatus;
-import com.example.bookapijpa2.model.request.BookRequest;
-import com.example.bookapijpa2.model.request.PatchBookRequest;
-import com.example.bookapijpa2.model.request.UpdateBookRequest;
-import com.example.bookapijpa2.model.response.BookResponse;
+import com.example.bookpagination.dao.entity.BookEntity;
+import com.example.bookpagination.model.request.BookRequest;
+import com.example.bookpagination.model.request.PatchBookRequest;
+import com.example.bookpagination.model.request.UpdateBookRequest;
+import com.example.bookpagination.model.response.BookResponse;
 
-import static com.example.bookapijpa2.model.enums.BookStatus.AVAILABLE;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static com.example.bookpagination.model.enums.BookStatus.AVAILABLE;
 
 public class BookMapper {
     public static BookResponse buildBookResponse(BookEntity book) {
@@ -43,4 +45,13 @@ public class BookMapper {
                                          PatchBookRequest patchBookRequest) {
         bookEntity.setPage(patchBookRequest.getPage());
     }
+
+
+    public static List<BookResponse> mapToBookResponseList(List<BookEntity> bookEntities) {
+        return bookEntities.stream()
+                .map(BookMapper::buildBookResponse)
+                .collect(Collectors.toList());
+    }
+
+
 }

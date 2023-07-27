@@ -1,4 +1,4 @@
-package com.example.bookapijpa2;
+package com.example.bookpagination;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
